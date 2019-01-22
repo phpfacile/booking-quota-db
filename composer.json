@@ -1,0 +1,33 @@
+{
+    "name": "phpfacile/booking-quota-db",
+    "description": "Implementation of phpfacile/booking-quota services with a database as backend (using zend-db)",
+    "keywords": ["quota", "database"],
+    "homepage": "https://github.com/phpfacile/booking-quota",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHP Facile!",
+            "homepage": "https://www.phpfacile.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "phpfacile/booking": "^1.0.0",
+        "phpfacile/booking-quota": "^1.0.0",
+        "zendframework/zend-db": "^2.5.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "scripts": {
+        "cs-check": "phpcs -s src",
+        "cs-check-psr": "phpcs -s --standard=PSR1,PSR2 src",
+        "cs-check-pear": "phpcs -s --standard=PEAR src",
+        "cs-fix": "phpcbf src"
+    },
+    "autoload": {
+        "psr-4": {
+          "PHPFacile\\Booking\\Quota\\Db\\Service\\": "src/"
+        }
+    }
+}
